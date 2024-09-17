@@ -20,7 +20,7 @@ const Cart = () => {
       };
       const totalAmount = cart.reduce((total, item) => total + item.price * item.quantity, 0);
       if (cart.length === 0) {
-        return <p>Cart is currently empty</p>;
+        return <p>Cart is currently empty</p>
       }
   return (
     <div>

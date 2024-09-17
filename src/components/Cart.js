@@ -35,7 +35,7 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-      <button id="cart-items-list" onClick={clearCart}>Clear Cart</button>
+      <button id="clear-cart-button" onClick={clearCart}>Clear Cart</button>
       <h2 id="cart-total-amount">Total Amount: ${totalAmount}</h2>
     </div>
   )

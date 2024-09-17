@@ -12,8 +12,7 @@ switch(action.type){
                 if (item.quantity > 1) {
                     return { ...item, quantity: item.quantity - 1 }
                 } else {
-                    // return an empty array when the quantity reaches 0
-                    return []
+                    return state.filter(item => item.id !== action.id);
                 }
             } else {
                 return item

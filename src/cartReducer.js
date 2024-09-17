@@ -7,7 +7,18 @@ switch(action.type){
         return state.map(item=>item.id === action.id?{...item,quantity:item.quantity+1}:item)
     
     case 'DECREASE_QUANTITY':
-        return state.map(item=>item.id === action.id && item.quantity>1 ?{...item,quantity:item.quantity-1}:item)
+        return state.map(item => {
+            if (item.id === action.id) {
+                if (item.quantity > 1) {
+                    return { ...item, quantity: item.quantity - 1 }
+                } else {
+                    // return an empty array when the quantity reaches 0
+                    return []
+                }
+            } else {
+                return item
+            }
+        })
     
     case 'REMOVE_FROM_CART':
         return state.filter(item => item.id !== action.id);

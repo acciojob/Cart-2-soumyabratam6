@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav>
-        <h2>Shopping Cart</h2>
+        <h2>const [state, dispatch] = useReducer(reducer, initialState, init)</h2>
         <div id="nav-cart-item-count">Cart: {totalItems} items</div>
     </nav>
   )

@@ -31,11 +31,11 @@ const Cart = () => {
             {item.name} - ${item.price} x {item.quantity}
             <button id={`decrement-btn-${item.id}`} onClick={() => decreaseQuantity(item.id)}>-</button>
             <button id={`increment-btn-${item.id}`} onClick={() => increaseQuantity(item.id)}>+</button>
-            <button id={`cart-item-remove-${item.id}`} onClick={() => removeFromCart(item.id)}>Remove</button>
+            <button id='cart-item-remove-1' onClick={() => removeFromCart(item.id)}>Remove</button>
+            <button id="clear-cart-button" onClick={clearCart}>Clear Cart</button>
           </li>
         ))}
       </ul>
-      <button id="clear-cart-button" onClick={clearCart}>Clear Cart</button>
       <h2 id="cart-total-amount">Total Amount: ${totalAmount}</h2>
     </div>
   )
